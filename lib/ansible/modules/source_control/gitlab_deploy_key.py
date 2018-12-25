@@ -192,8 +192,8 @@ def main():
     private_token = module.params['private_token']
     project = module.params['project']
     state = module.params['state']
-   
-    if api_url == None:
+
+    if api_url is None:
         module.fail_json(msg="api_url can't be empty")
 
     if not access_token and not private_token:
